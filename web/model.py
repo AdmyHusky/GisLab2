@@ -8,7 +8,8 @@ class read_files:
             Trusted_Connection='yes'
             )
         Country = qurey_country
+        SQL = "SELECT NAME,geom.MakeValid().STArea() as Area FROM world WHERE NAME = '%s'"
         cursor = conn.cursor()
-        cursor.execute("SELECT NAME,geom.MakeValid().STArea() as Area FROM world WHERE NAME = 'Belgium'") 
+        cursor.execute(SQL%(Country)) 
         for row in cursor:
             return row
