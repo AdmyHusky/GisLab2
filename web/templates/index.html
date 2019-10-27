@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GIS_LAB2</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <h1>Find Country Area</h1>
+    <form action="/ShowArea" method = "post">
+      <input type="text" name="Country">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form> 
+    <br><br>
+    {{ GoToModel }}
+</body>
+
+</html>
